@@ -1,13 +1,11 @@
 # Maio YT AI Scout
 
-A local MERN application that finds and ranks high-view YouTube videos in a niche. Phase 3 combines deterministic threshold filtering, broader discovery, metric snapshots, sampled-percentile scoring, optional local Ollama analysis, and channel-relative baselines.
+A local MERN application that finds and ranks high-view YouTube videos in any niche. Combines deterministic threshold filtering, broader discovery, metric snapshots, sampled-percentile scoring, optional local Ollama analysis, and channel-relative baselines.
 
-## What is implemented
+## Features
 
 - Niche search through YouTube Data API v3
-- Recent three calendar months by default, plus presets and exact start/end dates
 - 100,000 minimum current views by default
-- Original/spoken-language selection using `snippet.defaultAudioLanguage`
 - Strict declared-language filtering and an Any-language mode
 - MongoDB-backed video and search-result cache
 - One optional additional YouTube result page
@@ -52,7 +50,6 @@ All other local parameters are in the same file: MongoDB URI, host/ports, timezo
 ## Install and run
 
 ```powershell
-cd E:\CODEX
 npm install
 npm run dev
 ```
