@@ -78,15 +78,28 @@ export default function App() {
 
   return (
     <div className="app-shell">
+      <div className="scroll-progress" aria-hidden="true" />
       <header className="topbar">
         <a className="brand" href="/" aria-label="Maio YT AI Scout home"><span>MA</span> Maio YT AI Scout</a>
         <div className="local-pill"><i /> Local research workspace</div>
       </header>
       <main>
         <section className="hero">
-          <span className="eyebrow">YouTube niche intelligence</span>
-          <h1>Spot the videos that<br /><em>outperform the noise.</em></h1>
-          <p>Search any niche. Surface recent videos over 100K views. Study what is already working.</p>
+          <div className="hero-copy" data-scroll data-scroll-speed="0.2">
+            <span className="eyebrow">YouTube niche intelligence</span>
+            <h1>Spot the videos that<br /><em>outperform the noise.</em></h1>
+            <p>Search any niche. Surface recent videos over 100K views. Study what is already working.</p>
+          </div>
+          <div className="hero-visual" aria-hidden="true" data-scroll data-scroll-speed="0.5">
+            <span className="motion-orb orb-indigo" />
+            <span className="motion-orb orb-lavender" />
+            <span className="motion-orb orb-coral" />
+            <div className="signal-card">
+              <span>AI signal</span>
+              <strong>Outliers in motion</strong>
+              <i />
+            </div>
+          </div>
         </section>
         <SearchForm form={form} setForm={setForm} config={config} loading={loading} onSubmit={submitSearch} />
         {error && <div className="error-banner" role="alert"><strong>Research stopped.</strong> {error}</div>}
